@@ -1,1 +1,3 @@
-# LB02_M307
+# lb02
+# Javascript-LB02
+# JS_LB02

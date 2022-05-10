@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <title>MA Architecture</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" type="image/png" href="./assets/maa_logo.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css    "
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script>
+      function openNav() {
+        document.getElementById("hamburgerNav").style.width = "100%";
+      }
+      function closeNav() {
+        document.getElementById("hamburgerNav").style.width = "0%";
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <nav class="main-nav">
+        <ul>
+          <li>
+            <a class="logo" href="index.html"
+              ><img class="maa" src="assets/maa_logo.png" alt="logo"
+            /></a>
+          </li>
+          <div class="right-nav">
+            <li class="right-nav-margin">
+              <a href="firma.html">Firma</a>
+              <ul>
+                <li class="nav-li"><a href="news.html">News</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-li"><a href="kontakt.html">Kontakt</a></li>
+          </div>
+        </ul>
+      </nav>
+      <div id="hamburgerIcon" onclick="openNav()">&#9776;</div>
+      <!--  &#9776; stellt das ☰ Icon dar dar und wird via Media-Screen im CSS ein-&ausgeblendet -->
+    </header>
+    <main class="home-temp">
+      <h1><b>Unser Team</b></h1>
+      <p>
+        MA Architecture ist ein Team von zurzeit 12 Mitarbeitenden, die in
+        interdisziplinär arbeitenden Teams von Marktanalysten, Ökonomen,
+        Innenarchitekten, Architekten und Projektleitern, ihr Fachwissen für
+        nutzen- und erlebnisorientierte Architektur in die unterschiedlichsten
+        Projekte und Märkte einbringen.
+      </p>
+      <div class="firma">
+        <div class="card" style="width: 18rem">
+          <img
+            src="./assets/roderickpike.jpg"
+            class="card-img-top"
+            alt="Roderick Pike"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Roderick Pike</h5>
+            <p class="card-text">CEO</p>
+            <a href="mailto:maa@example.com" class="btn btn-primary"
+              >Kontaktieren</a
+            >
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img
+            src="./assets/christophhaas.jpg"
+            class="card-img-top"
+            alt="Christoph Haas"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Christoph Haas</h5>
+            <p class="card-text">Brand Manager</p>
+            <a href="mailto:maa@example.com" class="btn btn-primary"
+              >Kontaktieren</a
+            >
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img
+            src="./assets/danielheim.jpg"
+            class="card-img-top"
+            alt="Daniel Heim"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Daniel Heim</h5>
+            <p class="card-text">Sales Manager</p>
+            <a href="mailto:maa@example.com" class="btn btn-primary"
+              >Kontaktieren</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="firma-2">
+        <div class="card" style="width: 18rem">
+          <img
+            src="./assets/hansmueller.jpg"
+            class="card-img-top"
+            alt="Hans Mueller"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Hans Mueller</h5>
+            <p class="card-text">Head of Design</p>
+            <a href="mailto:maa@example.com" class="btn btn-primary"
+              >Kontaktieren</a
+            >
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img
+            src="./assets/simongensmer.jpg"
+            class="card-img-top"
+            alt="Simon Gensmer"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Simon Gensmer</h5>
+            <p class="card-text">Client Director</p>
+            <a href="mailto:maa@example.com" class="btn btn-primary"
+              >Kontaktieren</a
+            >
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img
+            src="./assets/catherineguenter.jpg"
+            class="card-img-top"
+            alt="Catherine Guenter"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Catherine Guenter</h5>
+            <p class="card-text">Human Ressources</p>
+            <a href="mailto:maa@example.com" class="btn btn-primary"
+              >Kontaktieren</a
+            >
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="text-center">
+        © 2021 MA Architecture. Alle Rechte vorbehalten.
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+      crossorigin="anonymous"
+    ></script>
+    <nav id="hamburgerNav">
+      <!-- Die Hamburger Nav wird mittels script.js geöffnet oder geschlossen -->
+      <a class="closebtn" onclick="closeNav()" href="#">&times;</a>
+      <!--  &times; stellt das X Icon dar -->
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="firma.html">Firma</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>
