@@ -1,13 +1,39 @@
 // read form element
-const form = document.getElementById(elementId: 'form');
-const geschlecht = document.getElementById(elementId 'geschlecht');
-const vorname = document.getElementById(elementId 'vorname');
-const nachname = document.getElementById(elementId 'nachname');
-const email = document.getElementById(elementId 'email');
-const sprachen = document.getElementById(elementId 'sprachen');
+const form = document.getElementById("form");
+const geschlecht = document.getElementById("geschlecht");
+const vorname = document.getElementById("vorname");
+const nachname = document.getElementById("nachname");
+const email = document.getElementById("email");
+const sprachen = document.getElementById("sprachen");
+
+// Check required fields
+function checkRequired(input){
+    let isRequired = false;
+    if (input.value.trim() === ''){
+        //error
+        console.log(`${input.id} is required!`);
+        isRequired = true;
+    } else {
+        console.log(`${input.id} is provided!`);
+    }
+    return isRequired;
+}
+
+// Validate form input elements
+function validateForm(){
+    //check required inputs
+    if (!checkRequired(vorname)){
+        //success .. proceed with program  
+    } else {
+        //missing input
+        console.log("Missing input");
+    }
+}
 
 // Event Listeners
-form.addEventListener(type: 'submit' , listener: function (e:Event){
+form.addEventListener('submit' , function(e){
     e.preventDefault();
-    alert("test");
+    //First Validate form
+    validateForm();
 });
+
