@@ -57,42 +57,56 @@
       <div>
         <form id="form" class="form">
           <h2>Bitte abonnieren Newsletter</h2>
-          <div class="form-control">
+          <div class="formular-container">
             <p>Geschlecht</p>
-            <input type="radio" id="radio" />
-            <label for="geschlecht">Männlich</label>
-            <input type="radio" id="geschlecht" />
-            <label for="geschlecht">Weiblich</label>
-            <input type="radio" id="radio" />
-            <label for="geschlecht">Diverses</label>
+            <input type="radio" id="maennlich" name="geschlecht" />
+            <label for="maennlich">Männlich</label>
+            <br />
+            <input type="radio" id="weiblich" name="geschlecht" />
+            <label for="weiblich">Weiblich</label>
+            <br />
+            <input type="radio" id="diverses" name="geschlecht" />
+            <label for="diverses">Diverses</label>
           </div>
-          <!--DELETE-->
-          <br />
-          <br />
-          <!--DELETE-->
-          <div class="form-control">
+          <div class="formular-container">
             <label for="vorname">Vorname</label>
-            <input type="text" id="vorname" placeholder="vorname eingeben" />
+            <input
+              type="text"
+              id="vorname"
+              placeholder="vorname eingeben"
+              class="formular"
+            />
           </div>
-          <div class="form-control">
+          <div class="formular-container">
             <label for="nachname">Nachname</label>
-            <input type="text" id="nachname" placeholder="nachname eingeben" />
+            <input
+              type="text"
+              id="nachname"
+              placeholder="nachname eingeben"
+              class="formular"
+            />
           </div>
-          <div class="form-control">
+          <div class="formular-container">
             <label for="email">Email</label>
-            <input type="email" id="email" placeholder="email eingeben" />
+            <input
+              type="email"
+              id="email"
+              placeholder="email eingeben"
+              class="formular"
+            />
           </div>
-          <div class="form-control">
+          <div class="formular-container">
             <label for="password">Passwort</label>
             <input
               type="password"
               id="password"
               placeholder="passwort eingeben"
+              class="formular"
             />
           </div>
           <button type="submit">Submit</button>
         </form>
-        <script src="js/validate-script"></script>
+        <script src="js/validate-inputs.js"></script>
       </div>
     </main>
     <footer>
