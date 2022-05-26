@@ -51,12 +51,12 @@
       <!--  &#9776; stellt das ☰ Icon dar dar und wird via Media-Screen im CSS ein-&ausgeblendet -->
     </header>
     <main class="home-temp">
+    </div>
       <h1><b>Newsletter abonnieren</b></h1>
 
       <!--Formular-->
       <div>
-        
-        <br>
+        <br />
         <form id="form" class="form">
           <div class="formular-container" id="geschlecht">
             <p>Geschlecht</p>
@@ -95,6 +95,10 @@
               placeholder="email eingeben"
               class="formular"
             />
+          </div>
+          <div class="formular-container">
+            <input type="checkbox" name="terms" id="agb" />
+            <label for="agb">Ich bin einverstanden mit den <a href="https://www.startups.ch/rechtliche-informationen/agb" target="popup" onclick="window.open('https://www.startups.ch/rechtliche-informationen/agb','popup','width=600,height=600'); return false;">AGB's</a></label>
           </div>
           <button type="submit">Submit</button>
         </form>
