@@ -4,6 +4,7 @@ const username = document.getElementById("username");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
 const agree = document.getElementById("agree");
+const phone = document.getElementById('phone');
 
 // Show input error message
 function showError(input, message) {
@@ -42,6 +43,17 @@ function checkEmail(input) {
     showError(input, "Email is not valid");
   }
 }
+
+// Check phone is valid
+function checkPhone(input) {
+  const re = /(\b(0041)|\B\+41)(\s?\(0\))?(\s)?[1-9]{2}(\s)?[0-9]{3}(\s)?[0-9]{2}(\s)?[0-9]{2}\b/;
+  if (re.test(input.value.trim())) {
+    showSuccess(input);
+  } else {
+    showError(input, 'Diese Telefonnummer ist ungültig');
+  }
+}
+
 
 // Check required fields
 function checkRequired(inputArr) {
@@ -82,11 +94,13 @@ function getFieldName(input) {
 
 // Validate form input elements
 function validateForm() {
-  if (!checkRequired([username, email, password, agree])) {
+  if (!checkRequired([username, email, password, agree, phone])) {
     checkLength(username, 3, 15);
     checkLength(password, 8, 25);
+    checkLength(phone, 10, 15);
     checkEmail(email);
     checkCheckbox(agree);
+    checkPhone(phone);
   }
 }
 
