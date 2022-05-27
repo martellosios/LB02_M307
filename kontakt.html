@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <title>MA Architecture</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/formular.css" />
     <link rel="icon" type="image/png" href="./assets/maa_logo.svg" />
     <link
       rel="stylesheet"
@@ -52,62 +52,42 @@
     </header>
     <main class="home-temp">
       <h1><b>Kontaktformular</b></h1>
-      <p></p>
-      <br />
-      <br />
-      <br />
+      <div class="formular-all">
+        <form
+          id="form"
+          class="form"
+          onsubmit="return checkCheckbox(this)"
+          action=""
+          method="post"
+        >
+          <h2 class="form-titel">Please register to get full access.</h2>
+          <div class="formular-control">
+            <label class="text-form" for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter username" />
+            <small>Error message</small>
+          </div>
+          <div class="formular-control">
+            <label class="text-form" for="email">Email</label>
+            <input type="text" id="email" placeholder="Enter email" />
+            <small>Error message</small>
+          </div>
+          <div class="formular-control">
+            <label class="text-form" for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter password" />
+            <small>Error message</small>
+          </div>
+          <div class="formular-control">
+            <input type="checkbox" name="agree" id="agree" value="yes" />
+            <label for="agree">Ich akzeptiere die AGB's</label>
+            <div id="checkbox-error">
+              Can't proceed as you didn't agree to the terms!
+            </div>
+          </div>
+          <button type="submit" name="submit" value="Submit">Submit</button>
+        </form>
+      </div>
 
-      <form>
-        <div class="form-group">
-          <label for="exampleFormControlSelect1">Anrede</label>
-          <select class="form-control" id="exampleFormControlSelect1">
-            <option>Herr</option>
-            <option>Frau</option>
-            <option>keine Angabe</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="exampleFormControlInput1">Vorname</label>
-          <input
-            type="email"
-            class="form-control"
-            id="exampleFormControlInput1"
-            placeholder="Nachname"
-          />
-        </div>
-
-        <div class="form-group">
-          <label for="exampleFormControlInput1">Nachname</label>
-          <input
-            type="email"
-            class="form-control"
-            id="exampleFormControlInput1"
-            placeholder="Vorname"
-          />
-        </div>
-
-        <div class="form-group">
-          <label for="exampleFormControlInput1">Email</label>
-          <input
-            type="email"
-            class="form-control"
-            id="exampleFormControlInput1"
-            placeholder="name@example.com"
-          />
-        </div>
-
-        <div class="form-group">
-          <label for="exampleFormControlTextarea1">Nachricht</label>
-          <textarea
-            class="form-control"
-            id="exampleFormControlTextarea1"
-            rows="3"
-          ></textarea>
-        </div>
-
-        <input class="submit-button" type="submit" value="Submit" />
-      </form>
+      <script src="js/validate-inputs.js"></script>
     </main>
     <footer>
       <div class="text-center">

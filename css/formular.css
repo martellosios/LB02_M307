@@ -1,0 +1,313 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  background-color: whitesmoke;
+}
+
+.home-temp {
+  background-size: cover;
+  min-height: 100vh;
+  background-color: whitesmoke;
+  margin-top: 100px;
+}
+
+/****** Navigation  ******/
+/****** Navigation  ******/
+
+img.maa {
+  height: 80px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  width: 100%;
+}
+
+.right-nav {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.right-nav-margin {
+  margin-right: 80px;
+}
+
+.main-nav {
+  margin-top: 50px;
+}
+.main-nav a {
+  text-decoration: none;
+  color: #222;
+  font-size: 1.5em;
+}
+.main-nav a:hover,
+.main-nav a.active {
+  display: flex;
+  text-underline-position: under;
+  text-decoration: underline;
+  transition: 0.1s;
+  color: #222;
+}
+
+.main-nav a.active {
+  display: flex;
+}
+.main-nav li ul a {
+  display: none;
+  margin-top: 10px;
+}
+.main-nav li:hover > ul a {
+  display: flex;
+}
+
+/****** Header  ******/
+/****** Header  ******/
+header {
+  position: absolute;
+  top: 0;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 150px;
+  width: 100%;
+}
+
+/* Navigation: Hamburger  */
+#hamburgerIcon {
+  display: none; /* Das Icon wird nicht angezeigt, erst wenn der Bildschirm kleiner als 812px ist */
+  font-size: 3em;
+  cursor: pointer;
+  color: #dfdfdf;
+}
+
+#hamburgerNav {
+  position: fixed;
+  z-index: 1;
+  height: 100%;
+  width: 0; /* Hat eine Breite von 0, wird also nicht angezeigt */
+  top: 0;
+  left: 0;
+  padding-top: 110px;
+  overflow-x: hidden;
+  transition: 0.5s;
+  background-color: #545761;
+  z-index: 100;
+}
+
+#hamburgerNav .closebtn {
+  position: absolute;
+  top: 10px;
+  right: 40px;
+  font-size: 60px;
+}
+
+#hamburgerNav a {
+  text-decoration: none;
+  font-size: 30px;
+  line-height: 50px;
+  color: #dfdfdf;
+  transition: 0.2s;
+}
+#hamburgerNav a:hover {
+  text-decoration: underline;
+  text-underline-position: under;
+  transition: 0.2s;
+}
+
+#hamburgerNav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/******  Main  ******/
+/******  Main  ******/
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 150px 150px 150px 150px;
+}
+main img {
+  width: 100%;
+  height: 100%;
+}
+main .button {
+  background-color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 20px 45px;
+  text-decoration: none;
+}
+main .button:hover {
+  background-color: #dfdfdf;
+}
+main .button:hover > a {
+  color: #111;
+}
+
+main .button a {
+  font-size: 2em;
+  color: #dfdfdf;
+  text-decoration: none;
+}
+
+.news,
+.index {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.news article {
+  width: 45%;
+}
+
+button.btn.btn-outline-dark {
+  height: 50px;
+  margin-bottom: 100px;
+}
+
+button a {
+  color: #000;
+  text-decoration: none;
+}
+
+button a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+button:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+img.d-block.w-100 {
+  border: 5px solid burlywood;
+}
+
+.carousel-indicators li {
+  background-color: burlywood !important;
+}
+
+/******  Footer  ******/
+/******  Footer  ******/
+footer {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  padding: 0 100px;
+  position: relative;
+  bottom: 0;
+  z-index: 9999;
+  color: white;
+  text-align: center;
+}
+
+.text-center {
+  margin: 0;
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-align: center;
+  left: auto;
+  right: auto;
+}
+
+/**************/
+:root {
+  --success-color: #2ecc71;
+  --error-color: #e74c3c;
+}
+
+.formular-all {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  width: 500px;
+}
+
+.form-titel {
+  text-align: center;
+  margin: 0 0 20px;
+}
+
+.form {
+  padding: 30px 40px;
+}
+
+.formular-control {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.formular-control input {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.text-form {
+  color: rgb(73, 73, 73);
+  display: block;
+}
+
+.formular-control input:focus {
+  outline: 0;
+  border-color: #777;
+}
+
+.formular-control.success input {
+  border-color: var(--success-color);
+}
+
+.formular-control.error input {
+  border-color: var(--error-color);
+}
+
+.formular-control small {
+  color: var(--error-color);
+  left: 0;
+  visibility: hidden;
+  font-size: 0.75rem;
+}
+
+.formular-control.error small {
+  visibility: visible;
+}
+
+.form button {
+  cursor: pointer;
+  background-color: #3498db;
+  border: 2px solid #3498db;
+  border-radius: 4px;
+  color: #fff;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+#checkbox-error {
+  visibility: hidden;
+  color: #e74c3c;
+  font-size: 0.75rem;
+}
