@@ -7,7 +7,7 @@ const { v4: uuidv4 } = require("uuid");
 const UserRepository = require("./UserRepository");
 const Validation = require("./ValidationService");
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5500;
 const server = app.listen(port);
 console.log(`Running at Port ${port}`);
 server.timeout = 1000 * 60 * 2; // 2 minutes

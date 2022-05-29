@@ -60,7 +60,7 @@
           action=""
           method="post"
         >
-          <h2 class="form-titel">Please register to get full access.</h2>
+          <h2 class="form-titel">Kontaktieren Sie uns</h2>
           <div class="formular-control">
             <label class="text-form" for="nachname">Nachname</label>
             <input type="text" id="nachname" placeholder="Nachname eingeben" />
@@ -73,22 +73,44 @@
           </div>
           <div class="formular-control">
             <label class="text-form" for="email">Email</label>
-            <input type="text" id="email" placeholder="Enter email" />
+            <input type="text" id="email" placeholder="E-Mail eingeben" />
             <small>Error message</small>
           </div>
           <div class="formular-control">
-            <label for="phone" class="text-form">Phone</label>
-            <input type="text" id="phone" placeholder="Deine Telefonnummer" />
+            <label for="phone" class="text-form">Telefonnummer</label>
+            <input
+              type="text"
+              id="phone"
+              placeholder="Telefonnummer eingeben"
+            />
             <small>Error message</small>
           </div>
           <div class="formular-control">
+            <textarea
+              class="text-form"
+              name="txt"
+              rows="15"
+              cols="50"
+              maxlength="2500"
+            >
+Hier ihre Nachricht eingeben ...
+            </textarea>
+          </div>
+          <div class="formular-control2">
             <input type="checkbox" name="agree" id="agree" value="yes" />
-            <label for="agree">Ich akzeptiere die AGB's</label>
+            <label for="agree"
+              >Ich akzeptiere die
+              <a
+                href="https://www.startups.ch/rechtliche-informationen/agb"
+                target="_blank"
+                >AGB's</a
+              ></label
+            >
             <div id="checkbox-error">
               Can't proceed as you didn't agree to the terms!
             </div>
           </div>
-          <button type="submit" name="submit" value="Submit">Submit</button>
+          <button type="submit" name="submit" value="Submit">Absenden</button>
         </form>
       </div>
 

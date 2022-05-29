@@ -239,16 +239,17 @@ footer {
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  width: 500px;
+  width: 60%;
 }
 
 .form-titel {
-  text-align: center;
+  text-align: left;
   margin: 0 0 20px;
 }
 
 .form {
   padding: 30px 40px;
+  margin-top: 70px;
 }
 
 .formular-control {
@@ -295,10 +296,10 @@ footer {
 
 .form button {
   cursor: pointer;
-  background-color: #3498db;
-  border: 2px solid #3498db;
+  background-color: burlywood;
+  border: 2px solid burlywood;
   border-radius: 4px;
-  color: #fff;
+  color: #000;
   display: block;
   font-size: 16px;
   padding: 10px;
@@ -306,8 +307,30 @@ footer {
   width: 100%;
 }
 
+.form button:hover {
+  background-color: rgb(139, 117, 87);
+  border: 2px solid rgb(139, 117, 87);
+  border-radius: 4px;
+  color: #fff;
+  transition: 0.2s;
+}
+
 #checkbox-error {
   visibility: hidden;
   color: #e74c3c;
   font-size: 0.75rem;
+}
+
+textarea.text-form {
+  width: 100%;
+  padding: 20px;
+  color: #777;
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+}
+
+.formular-control2 {
+  position: relative;
+  margin-bottom: 10px;
+  margin-top: 30px;
 }
