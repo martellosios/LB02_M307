@@ -69,7 +69,7 @@ app.post("/register", (req, res) => {
   }
 });
 
-app.get("/test2", (req, res) => {
+app.get("/test1", (req, res) => {
   const id = uuidv4();
   res.send(id);
 });

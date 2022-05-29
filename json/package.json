@@ -1,9 +1,8 @@
 {
-  "name": "M307_LB02",
+  "name": "m307-lb02",
   "version": "1.0.0",
   "description": "LB02_jehiel_affolter_sauro_martellosio",
   "main": "server.js",
-
   "dependencies": {
     "body-parser": "^1.19.0",
     "uuid": "^8.3.1"
