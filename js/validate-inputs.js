@@ -6,6 +6,7 @@ const email = document.getElementById("email");
 const password = document.getElementById("password");
 const agree = document.getElementById("agree");
 const phone = document.getElementById("phone");
+const textfeld = document.getElementById("textfeld");
 
 // Show input error message
 function showError(input, message) {
@@ -95,12 +96,13 @@ function getFieldName(input) {
 
 // Validate form input elements
 function validateForm() {
-  if (!checkRequired([vorname, nachname, email, password, agree, phone])) {
+  if (!checkRequired([vorname, nachname, email, password, agree, phone, textfeld])) {
     checkLength(password, 8, 25);
     checkLength(phone, 10, 15);
     checkEmail(email);
     checkCheckbox(agree);
     checkPhone(phone);
+    checkLength(textfeld, 10, 2500);
   }
 }
 
