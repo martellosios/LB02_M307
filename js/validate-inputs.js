@@ -3,7 +3,7 @@ const form = document.getElementById("form");
 const vorname = document.getElementById("vorname");
 const nachname = document.getElementById("nachname");
 const email = document.getElementById("email");
-const password = document.getElementById("password");
+//const password = document.getElementById("password");
 const agree = document.getElementById("agree");
 const phone = document.getElementById("phone");
 const textfeld = document.getElementById("textfeld");
@@ -24,9 +24,9 @@ function showSuccess(input) {
 
 // Check checkbox
 
-function checkCheckbox(form) {
-  console.log("checkbox checked is ", form.agree.checked);
-  if (!form.agree.checked) {
+function checkCheckbox(input) {
+  console.log("checkbox checked is ", input.checked);
+  if (!input.checked) {
     document.getElementById("checkbox-error").style.visibility = "visible";
     return false;
   } else {
@@ -97,9 +97,8 @@ function getFieldName(input) {
 // Validate form input elements
 function validateForm() {
   if (
-    !checkRequired([vorname, nachname, email, password, agree, phone, textfeld])
+    !checkRequired([vorname, nachname, email, agree, phone, textfeld])
   ) {
-    checkLength(password, 8, 25);
     checkLength(phone, 10, 15);
     checkEmail(email);
     checkCheckbox(agree);
@@ -108,32 +107,10 @@ function validateForm() {
   }
 }
 
-/**
- * Send form data to server
- * Info: https://stackoverflow.com/questions/4295782/how-to-process-post-data-in-node-js
- */
-function sendForm() {
-  const SERVER = "http://localhost:3000";
-  fetch(SERVER + "/register/", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      user: {
-        username: username,
-        email: email,
-      },
-    }),
-  });
-}
-
 // Event listeners
 form.addEventListener("submit", function (e) {
   //https://www.w3schools.com/jsref/event_preventdefault.asp
   e.preventDefault();
   //First validate form
   validateForm();
-  //Send Data
-  sendForm();
 });
