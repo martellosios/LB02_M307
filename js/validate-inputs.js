@@ -81,7 +81,7 @@ function checkLength(input, min, max) {
   } else if (input.value.length > max) {
     showError(
       input,
-      `${getFieldName(input)} muss mindestens ${max} Buchstaben lang sein`
+      `${getFieldName(input)} darf maximal ${max} Buchstaben lang sein`
     );
   } else {
     showSuccess(input);
@@ -100,7 +100,7 @@ function validateForm() {
     checkEmail(email);
     checkCheckbox(agree);
     checkTelefon(telefon);
-    checkLength(textfeld, 10, 2500);
+    checkLength(textfeld, 10, 500);
   }
 }
 
