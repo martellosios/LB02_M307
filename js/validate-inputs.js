@@ -41,7 +41,7 @@ function checkEmail(input) {
   if (re.test(input.value.trim())) {
     showSuccess(input);
   } else {
-    showError(input, "Email is not valid");
+    showError(input, "Email ist ungültig");
   }
 }
 
@@ -52,7 +52,7 @@ function checkTelefon(input) {
   if (re.test(input.value.trim())) {
     showSuccess(input);
   } else {
-    showError(input, "Diese Telefonnummer ist ungültig");
+    showError(input, "Telefonnummer ist ungültig");
   }
 }
 
@@ -76,12 +76,12 @@ function checkLength(input, min, max) {
   if (input.value.length < min) {
     showError(
       input,
-      `${getFieldName(input)} must be at least ${min} characters`
+      `${getFieldName(input)} muss mindestens ${min} Buchstaben lang sein`
     );
   } else if (input.value.length > max) {
     showError(
       input,
-      `${getFieldName(input)} must be less than ${max} characters`
+      `${getFieldName(input)} muss mindestens ${max} Buchstaben lang sein`
     );
   } else {
     showSuccess(input);
