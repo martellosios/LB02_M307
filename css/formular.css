@@ -265,6 +265,27 @@ footer {
   font-size: 14px;
 }
 
+.formular-control textarea {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.formular-control textarea:focus {
+  outline: 0;
+  border-color: #777;
+}
+
+.formular-control.success textarea {
+  border-color: var(--success-color);
+}
+
+.formular-control.error textarea {
+  border-color: var(--error-color);
+}
+
 .text-form {
   color: rgb(73, 73, 73);
   display: block;
