@@ -1,5 +1,5 @@
 // Validate form input elements
-const validateLib = require('./ValidationLib');
+const validateLib = require("./ValidationLib");
 
 /**
  * Validate User
@@ -7,29 +7,56 @@ const validateLib = require('./ValidationLib');
  * @returns {boolean|{msg: string, isNotValid: boolean}|{isNotValid}|*}
  */
 function validateUser(userObj) {
-    // Check required fields
-    let result = validateLib.checkRequired("username", userObj.username);
-    if (result.isNotValid) { return result; }
+  // Check required fields
+  let result = validateLib.checkRequired("username", userObj.username);
+  if (result.isNotValid) {
+    return result;
+  }
 
-    result = validateLib.checkRequired("email", userObj.email);
-    if (result.isNotValid) { return result; }
+  result = validateLib.checkRequired("vorname", userObj.vorname);
+  if (result.isNotValid) {
+    return result;
+  }
 
-    result = validateLib.checkRequired("password", userObj.password);
-    if (result.isNotValid) { return result; }
+  result = validateLib.checkRequired("email", userObj.email);
+  if (result.isNotValid) {
+    return result;
+  }
 
-    //check length
-    result = validateLib.checkLength("username",userObj.username, 3, 15);
-    if (result.isNotValid) { return result; }
+  result = validateLib.checkRequired("password", userObj.password);
+  if (result.isNotValid) {
+    return result;
+  }
 
-    result = validateLib.checkLength("password", userObj.password, 6, 25);
-    if (result.isNotValid) { return result; }
+  result = validateLib.checkRequired("telefon", userObj.telefon);
+  if (result.isNotValid) {
+    return result;
+  }
 
-    //check email syntax
-    result = validateLib.checkEmail("email", userObj.email);
-    if (result.isNotValid) { return result; }
+  //check length
+  result = validateLib.checkLength("username", userObj.username, 3, 15);
+  if (result.isNotValid) {
+    return result;
+  }
 
-    //all inputs are valid and isNotValid=false
-    return false;
+  result = validateLib.checkLength("password", userObj.password, 6, 25);
+  if (result.isNotValid) {
+    return result;
+  }
+
+  //check email syntax
+  result = validateLib.checkEmail("email", userObj.email);
+  if (result.isNotValid) {
+    return result;
+  }
+
+  //check email syntax
+  result = validateLib.checkTelefon("telefon", userObj.email);
+  if (result.isNotValid) {
+    return result;
+  }
+  //all inputs are valid and isNotValid=false
+  return false;
 }
 
 /**
@@ -37,5 +64,5 @@ function validateUser(userObj) {
  *  function to export WITHOUT beackets!
  */
 module.exports = {
-    validateUser
-}
+  validateUser,
+};

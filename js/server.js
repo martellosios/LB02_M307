@@ -19,7 +19,7 @@ console.log(`Running at Port ${port}`);
 server.timeout = 1000 * 60 * 2; // 2 minutes
 
 //Warning: Korrekt setzen!!
-const staticPath = "/data";
+const staticPath = "./data/";
 const registrationFile = staticPath + "registration.json";
 
 // Use middleware to set the default Content-Type
@@ -52,8 +52,10 @@ app.post("/register", (req, res) => {
   let userObj = {
     id: uuidv4(),
     username: req.body.user.username,
+    vorname: req.body.user.vorname,
     email: req.body.user.email,
     password: req.body.user.password,
+    telefon: req.body.user.telefon,
   };
 
   let result = Validation.validateUser(userObj);
