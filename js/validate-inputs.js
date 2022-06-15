@@ -100,7 +100,7 @@ function validateForm() {
     checkEmail(email);
     checkCheckbox(agree);
     checkTelefon(telefon);
-    checkLength(textfeld, 10, 500);
+    checkLength(textfeld, 10, 1000);
   }
 }
 
